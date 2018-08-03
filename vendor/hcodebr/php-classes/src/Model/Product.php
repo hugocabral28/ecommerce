@@ -14,9 +14,9 @@ class Product extends Model{
 
 	public static function checkList($list)
 	{
-			foreach ($$list as &$row) {
+			foreach ($list as &$row) {
 
-				$p = new Pruduct();
+				$p = new Product();
 
 				$p->setData($row);
 
@@ -26,12 +26,6 @@ class Product extends Model{
 
 			return $list;
 	}
-
-	/*public static function formatPrice($vlprice)
-	{
-			return
-	}*/
-
 	public function save()
 	{
 		$sql = new Sql();
